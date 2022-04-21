@@ -3,6 +3,9 @@
 #include <pcl/point_types.h>
 #include <pcl/filters/voxel_grid.h>
 
+/*
+*  data目录里面是点云数据文件table_scene_lms400.pcd
+*/
 int main ()
 {
   pcl::PCLPointCloud2::Ptr cloud (new pcl::PCLPointCloud2 ());
@@ -11,7 +14,7 @@ int main ()
   // Fill in the cloud data
   pcl::PCDReader reader;
   // Replace the path below with the path where you saved your file
-  reader.read ("table_scene_lms400.pcd", *cloud); // Remember to download the file first!
+  reader.read (".././data/table_scene_lms400.pcd", *cloud); // Remember to download the file first!
 
   std::cerr << "PointCloud before filtering: " << cloud->width * cloud->height 
        << " data points (" << pcl::getFieldsList (*cloud) << ")." << std::endl;
