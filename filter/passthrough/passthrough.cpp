@@ -1,6 +1,6 @@
 #include <iostream>
 #include <pcl/point_types.h>
- #include <pcl/filters/passthrough.h>
+#include <pcl/filters/passthrough.h>
  
  int main()
  {
@@ -29,8 +29,8 @@
   // Create the filtering object
   pcl::PassThrough<pcl::PointXYZ> pass;
   pass.setInputCloud (cloud);
-  pass.setFilterFieldName ("z");     //ÉèÖÃzÓòÓÃ»§ÂË²¨£¬
-  pass.setFilterLimits (0.0, 200.0);      //0.0-200.0Ö®ÍâµÄµã½«±»ÂË²¨µô
+  pass.setFilterFieldName ("z");     //ï¿½ï¿½ï¿½ï¿½zï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ë²ï¿½ï¿½ï¿½
+  pass.setFilterLimits (0.0, 200.0);      //0.0-200.0Ö®ï¿½ï¿½Äµã½«ï¿½ï¿½ï¿½Ë²ï¿½ï¿½ï¿½
   //pass.setFilterLimitsNegative (true);
   pass.filter (*cloud_filtered);
 
